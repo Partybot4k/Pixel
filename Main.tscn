@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://budbuky4ar55g"]
+
+[ext_resource type="PackedScene" uid="uid://begnrly861c7j" path="res://player.tscn" id="1_p2lnj"]
+[ext_resource type="Script" path="res://Creature.gd" id="2_qwavy"]
+[ext_resource type="Script" path="res://Pixel.gd" id="3_0pvxd"]
+[ext_resource type="Script" path="res://Node2D.gd" id="4_114gp"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_p2lnj")]
+
+[node name="Creature" type="Node2D" parent="."]
+script = ExtResource("2_qwavy")
+
+[node name="Pixel" type="Node2D" parent="Creature"]
+script = ExtResource("3_0pvxd")
+
+[node name="Enemy" type="Node2D" parent="."]
+script = ExtResource("4_114gp")
