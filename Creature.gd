@@ -1,4 +1,4 @@
-class_name Pixel
+class_name Creature
 extends Node2D
 
 

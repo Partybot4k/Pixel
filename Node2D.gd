@@ -1,5 +1,5 @@
-class_name Pixel
-extends Node2D
+class_name Enemy
+extends Creature
 
 
 # Called when the node enters the scene tree for the first time.
