@@ -3,10 +3,12 @@ extends CharacterBody2D
 
 const SPEED = 20000
 
-signal eaten(_amount)
-
 func _ready():
+<<<<<<< HEAD
 	get_parent().get_child_count()
+=======
+	pass
+>>>>>>> 05adb4471a4e53a717f5d657e0e49e5467123be2
 
 func _physics_process(delta):
 	var x_dir: float = Input.get_axis("left", "right")
@@ -14,8 +16,8 @@ func _physics_process(delta):
 	
 	velocity = Vector2(x_dir, y_dir) * SPEED * delta
 	
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 05adb4471a4e53a717f5d657e0e49e5467123be2
 	move_and_slide()
-
-func doEaten():
-	pass
