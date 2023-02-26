@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://budbuky4ar55g"]
+[gd_scene load_steps=7 format=3 uid="uid://budbuky4ar55g"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_wgdsw"]
 [ext_resource type="Texture2D" uid="uid://brrbno7h0ekks" path="res://icon.svg" id="2_1ygur"]
 [ext_resource type="Script" path="res://Creature.gd" id="3_guyo7"]
 [ext_resource type="Script" path="res://Pixel.gd" id="3_it153"]
+[ext_resource type="Script" path="res://Node2D.gd" id="5_e8lgb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mxwb4"]
 size = Vector2(128, 128)
@@ -15,6 +16,7 @@ motion_mode = 1
 script = ExtResource("1_wgdsw")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+modulate = Color(1, 0, 0, 1)
 texture = ExtResource("2_1ygur")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -25,3 +27,6 @@ script = ExtResource("3_guyo7")
 
 [node name="Pixel" type="Node2D" parent="Creature"]
 script = ExtResource("3_it153")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("5_e8lgb")
