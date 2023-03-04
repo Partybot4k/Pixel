@@ -1,18 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://begnrly861c7j"]
+[gd_scene load_steps=3 format=3 uid="uid://rj8krvwg6oqq"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_1yurr"]
-[ext_resource type="Texture2D" uid="uid://brrbno7h0ekks" path="res://icon.svg" id="2_ai2fe"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxwb4"]
-size = Vector2(128, 128)
+[ext_resource type="PackedScene" uid="uid://dvlkeyfibtmu5" path="res://pixel.tscn" id="2_y6d5w"]
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_1yurr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0, 0, 1)
-texture = ExtResource("2_ai2fe")
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_mxwb4")
+[node name="Pixel" parent="." instance=ExtResource("2_y6d5w")]

@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://bs3y2hx4mgvfs"]
+[gd_scene load_steps=3 format=3 uid="uid://deh2o1vcl6k5m"]
+
+[ext_resource type="PackedScene" uid="uid://rj8krvwg6oqq" path="res://player.tscn" id="1_aychm"]
+[ext_resource type="PackedScene" uid="uid://lwtejigj1xpv" path="res://singlePixel.tscn" id="2_q4lkt"]
 
 [node name="BrandonTest" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_aychm")]
+
+[node name="Pixel" parent="." instance=ExtResource("2_q4lkt")]
+position = Vector2(126, 309)
+
+[node name="Pixel2" parent="." instance=ExtResource("2_q4lkt")]
+position = Vector2(564, 129)
+
+[node name="Pixel3" parent="." instance=ExtResource("2_q4lkt")]
+position = Vector2(498, 471)
+
+[node name="Pixel4" parent="." instance=ExtResource("2_q4lkt")]
+position = Vector2(1058, 387)
